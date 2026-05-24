@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Az1kDev — Bot Buyurtma</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-wrap" id="logoTrigger" title="Az1kDev">
+        <img src="logo.jpg" alt="Az1kDev Logo" class="logo-img" onerror="this.style.display='none';document.getElementById('logoText').style.display='block'" />
+        <span class="logo-text" id="logoText">Az1kDev</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="plugins.html" class="nav-link">Pluginlar &amp; Zborkalar</a>
+        <a href="bots.html" class="nav-link active">Bot Buyurtma Berish</a>
+      </nav>
+      <a href="https://t.me/Az1kDev" target="_blank" class="tg-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+        Kanal
+      </a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero-section small-hero">
+      <div class="hero-tag">XIZMAT</div>
+      <h1 class="hero-title">Telegram <span class="accent">Bot Yasash</span></h1>
+      <p class="hero-sub">Sizga kerakli botni buyurtma qiling — biz professional darajada yasab beramiz</p>
+    </section>
+
+    <!-- BOT TURLARI KARTOCHKALAR -->
+    <section class="bot-types-section">
+      <h2 class="section-title">Bot turlari</h2>
+      <div class="bot-types-grid">
+
+        <div class="bot-type-card" data-type="dokon">
+          <div class="bot-type-icon">🛒</div>
+          <div class="bot-type-badge">Ommabop</div>
+          <h3>Do'kon boti</h3>
+          <p>Mahsulotlar katalogi, savat, buyurtma qabul qilish, to'lov integratsiyasi. Onlayn do'kon uchun ideal.</p>
+          <ul class="bot-features">
+            <li>✅ Mahsulotlar katalogi</li>
+            <li>✅ Buyurtma qabul qilish</li>
+            <li>✅ To'lov (Click/Payme)</li>
+            <li>✅ Admin panel</li>
+            <li>✅ Statistika</li>
+          </ul>
+          <button class="btn-order" onclick="selectBotType('dokon', 'Do\'kon boti')">Buyurtma berish</button>
+        </div>
+
+        <div class="bot-type-card" data-type="kanal">
+          <div class="bot-type-icon">📢</div>
+          <h3>Kanal / Guruh boti</h3>
+          <p>Kanalga obuna tekshirish, avtomatik post yuborish, a'zolarni boshqarish, reklama boti.</p>
+          <ul class="bot-features">
+            <li>✅ Obuna tekshirish</li>
+            <li>✅ Avtomatik postlar</li>
+            <li>✅ A'zolar statistikasi</li>
+            <li>✅ Rejalashtirish</li>
+            <li>✅ Ko'p kanal qo'llab-quvvatlash</li>
+          </ul>
+          <button class="btn-order" onclick="selectBotType('kanal', 'Kanal/Guruh boti')">Buyurtma berish</button>
+        </div>
+
+        <div class="bot-type-card" data-type="qoriqchi">
+          <div class="bot-type-icon">🛡️</div>
+          <h3>Qo'riqlovchi bot</h3>
+          <p>Guruhni spam, haqorat, reklama va zararli kontentdan himoya qiluvchi aqlli moderatsiya boti.</p>
+          <ul class="bot-features">
+            <li>✅ Spam filtri</li>
+            <li>✅ So'z filtri</li>
+            <li>✅ Captcha tizimi</li>
+            <li>✅ Ogohlantirish / Ban</li>
+            <li>✅ Kirish cheklovlari</li>
+          </ul>
+          <button class="btn-order" onclick="selectBotType('qoriqchi', 'Qo\'riqlovchi bot')">Buyurtma berish</button>
+        </div>
+
+        <div class="bot-type-card special-card" data-type="maxsus">
+          <div class="bot-type-icon">⚡</div>
+          <div class="bot-type-badge custom-badge">Maxsus</div>
+          <h3>O'zingiz xohlagan bot</h3>
+          <p>Yuqoridagilar mos kelmadimi? Xohlaganingizni yozing — biz uni yasab beramiz!</p>
+          <ul class="bot-features">
+            <li>✅ Har qanday funksiya</li>
+            <li>✅ Maxsus dizayn</li>
+            <li>✅ Individual yondashuv</li>
+            <li>✅ Narx kelishiladi</li>
+            <li>✅ Qo'llab-quvvatlash</li>
+          </ul>
+          <button class="btn-order" onclick="selectBotType('maxsus', 'Maxsus bot')">Buyurtma berish</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JARAYON -->
+    <section class="process-section">
+      <h2 class="section-title">Qanday ishlaydi?</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-info">
+            <h4>Buyurtma bering</h4>
+            <p>Quyidagi forma orqali bot turi va talablaringizni yozing</p>
+          </div>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-info">
+            <h4>Bog'lanamiz</h4>
+            <p>Admin 24 soat ichida Telegram orqali javob beradi</p>
+          </div>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-info">
+            <h4>Ishlab beramiz</h4>
+            <p>Kelishilgan muddatda tayyor botni topshiramiz</p>
+          </div>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-info">
+            <h4>Qo'llab-quvvatlash</h4>
+            <p>Bot ishlashida muammo bo'lsa, bepul tuzatamiz</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUYURTMA FORMA -->
+    <section class="order-section" id="orderSection">
+      <h2 class="section-title">Buyurtma berish</h2>
+      <div class="order-form-wrap">
+        <form class="order-form" id="orderForm" onsubmit="return false">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ismingiz *</label>
+              <input type="text" id="oName" placeholder="Ism Familiya" maxlength="60" />
+            </div>
+            <div class="form-group">
+              <label>Telegram username *</label>
+              <input type="text" id="oTelegram" placeholder="@username" maxlength="40" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Bot turi *</label>
+            <div class="bot-type-select" id="botTypeSelect">
+              <label class="type-option">
+                <input type="radio" name="botType" value="Do'kon boti" />
+                <span>🛒 Do'kon boti</span>
+              </label>
+              <label class="type-option">
+                <input type="radio" name="botType" value="Kanal/Guruh boti" />
+                <span>📢 Kanal/Guruh boti</span>
+              </label>
+              <label class="type-option">
+                <input type="radio" name="botType" value="Qo'riqlovchi bot" />
+                <span>🛡️ Qo'riqlovchi bot</span>
+              </label>
+              <label class="type-option">
+                <input type="radio" name="botType" value="Maxsus bot" />
+                <span>⚡ Maxsus bot</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Bot haqida batafsil *</label>
+            <textarea id="oDesc" placeholder="Botdan nima kutasiz? Qanday funksiyalar kerak? Qo'shimcha talablar..." rows="5" maxlength="1000"></textarea>
+            <span class="char-count" id="charCount">0/1000</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Taxminiy muddat</label>
+              <select id="oDeadline">
+                <option value="">Muhim emas</option>
+                <option value="Imkon qadar tez">Imkon qadar tez</option>
+                <option value="1 hafta ichida">1 hafta ichida</option>
+                <option value="2 hafta ichida">2 hafta ichida</option>
+                <option value="1 oy ichida">1 oy ichida</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Taxminiy byudjet</label>
+              <select id="oBudget">
+                <option value="">Kelishiladi</option>
+                <option value="50,000 - 100,000 so'm">50K - 100K so'm</option>
+                <option value="100,000 - 300,000 so'm">100K - 300K so'm</option>
+                <option value="300,000 - 500,000 so'm">300K - 500K so'm</option>
+                <option value="500,000+ so'm">500K+ so'm</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-error" id="orderError"></div>
+
+          <button type="button" class="btn-primary full btn-send-order" id="sendOrderBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+            Telegramga yuborish
+          </button>
+        </form>
+
+        <!-- SUCCESS STATE -->
+        <div class="order-success" id="orderSuccess" style="display:none">
+          <div class="success-icon">✅</div>
+          <h3>Buyurtma yuborildi!</h3>
+          <p>Tez orada <strong>Admin</strong>  siz bilan bog'lanadi.</p>
+          <a href="https://t.me/Az1kDev" target="_blank" class="tg-btn" style="display:inline-flex;margin-top:16px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+            @Az1kDev ga Obuna Bo'ling
+          </a>
+          <button class="btn-primary" style="margin-top:12px" onclick="resetForm()">Yangi buyurtma</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SUPPORT FAB -->
+  <button class="support-fab" id="supportBtn" title="Yordam">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="fab-label">Yordam</span>
+  </button>
+
+  <!-- SUPPORT MODAL -->
+  <div class="modal-overlay" id="supportModal">
+    <div class="modal-box support-modal">
+      <div class="modal-header">
+        <span>💬 Support Chat</span>
+        <button class="modal-close" id="closeSupport">✕</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg bot-msg">
+          <span class="msg-avatar">🤖</span>
+          <div class="msg-bubble">Salom! Az1kDev support xizmatiga xush kelibsiz. Ismingiz va savolingizni yozing.</div>
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="userNick" placeholder="Ismingiz..." class="chat-nick" maxlength="30" />
+        <input type="text" id="chatInput" placeholder="Xabar yozing..." class="chat-input" maxlength="500" />
+        <button id="sendChat" class="chat-send">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN LOGIN MODAL -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal-box admin-modal">
+      <div class="modal-header">
+        <span>🔐 Admin Panel</span>
+        <button class="modal-close" id="closeAdmin">✕</button>
+      </div>
+      <div class="admin-form">
+        <div class="form-group">
+          <label>Login</label>
+          <input type="text" id="adminLogin" placeholder="Login kiriting" autocomplete="off"/>
+        </div>
+        <div class="form-group">
+          <label>Parol</label>
+          <input type="password" id="adminPass" placeholder="Parol kiriting" autocomplete="off"/>
+        </div>
+        <div class="form-error" id="loginError"></div>
+        <button class="btn-primary full" id="loginBtn">Kirish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/bots.js"></script>
+</body>
+</html>
